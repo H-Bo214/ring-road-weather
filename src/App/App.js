@@ -1,15 +1,39 @@
-import React from 'react';
+import React, {Component} from 'react';
+import PropTypes from 'prop-types'
+import { BrowserRouter as Router, Route} from "react-router-dom";
+import '../App/App.css';
 
-import './App.css';
+// Add api import once method set up
+import Header from '../Header/Header'
+import DetailsPage from '../DetailsPage/DetailsPage'
+import FavoritesPage from '../FavoritesPage/FavoritesPage'
+import Form from '../Form/Form'
+import WeatherCard from '../WeatherCard/WeatherCard'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <h1>Hello World!</h1>
-      </header>
-    </div>
-  );
-}
+class App extends Component {
+  constructor() {
+    super();
+    this.state = {
+      currentWeather: {},
+      fiveDayForecast: [],
+      favorites: []
+    };
+
+  }
+
+  componentDidMount() {
+
+  }
+
+  render() {
+    return(
+      <main className="App">
+        <Header />
+        {/* <Form  /> */}
+      </main>
+    )
+  }
+
+};
 
 export default App;
