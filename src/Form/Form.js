@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import '../Form/Form.css'
 import PropTypes from 'prop-types';
+import { Redirect } from 'react-router-dom'
 import { southIceland, eastIceland, northIceland, westIceland } from '../cityNames'
 
 class Form extends Component {
@@ -8,6 +9,7 @@ class Form extends Component {
     super();
     this.state = {
       city: '',
+      redirectDetailPage: false,
     };
   };
 
@@ -25,6 +27,7 @@ class Form extends Component {
         name: this.state.city
       }
     this.props.handleFetch(cityName.name)
+    this.setState({redirectDetailPage: true})
   }
 
   render() {
@@ -45,10 +48,24 @@ class Form extends Component {
             <button 
               className="get-weather-button" 
               type="button"
-              onClick={ (event) => this.submitCityRequest(event)}
+              onClick={ (event) => this.submitCityRequest(event) }
             >Get weather
             </button>
+              {this.state.redirectDetailPage && <Redirect to="/details-page" />}
           </form>
+
+
+
+
+
+
+
+
+
+
+
+
+
 
           {/* <form className="selection-form">
             <h2 className="region">South Iceland</h2>
