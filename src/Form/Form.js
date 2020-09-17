@@ -16,60 +16,67 @@ class Form extends Component {
   }
 
   generateCities = (region) => {
-    return region.map(city => (<option key={city} value={city}>{city}</option>))
+    return region.map(city => (<option className="city-names" key={city} value={city}>{city}</option>))
   }
 
   render() {
     return(
-      <article className="form-parent">
-      <form className="selection-form">
-        <h2 className="region">North Iceland</h2>
-        <select
-          name="city"
-          value={this.state.city}
-          onChange={this.handleChange}
-        >
-          <option key={1} value={''}>Pick a city</option>
-          {this.generateCities(northIceland)}
-        </select>
-      </form>
+      <section>
+        <h2 className="subtitle">Your guide to weather along Iceland's ring road!</h2>
+        <article className="form-parent">
+          <form className="selection-form">
+            <h2 className="region">North Iceland</h2>
+            <select
+              name="city"
+              value={this.state.city}
+              onChange={this.handleChange}
+            >
+              <option key={1} value={''}>Pick a city</option>
+              {this.generateCities(northIceland)}
+            </select>
+            <button className="get-weather-button" type="button">Get weather</button>
+          </form>
 
-      <form className="selection-form">
-        <h2 className="region">South Iceland</h2>
-        <select
-          name="city"
-          value={this.state.city}
-          onChange={this.handleChange}
-        >
-          <option key={2} value={''}>Pick a city</option>
-          {this.generateCities(southIceland)}
-        </select>
-      </form>
+          <form className="selection-form">
+            <h2 className="region">South Iceland</h2>
+            <select
+              name="city"
+              value={this.state.city}
+              onChange={this.handleChange}
+            >
+              <option key={2} value={''}>Pick a city</option>
+              {this.generateCities(southIceland)}
+            </select>
+            <button className="get-weather-button" type="button">Get weather</button>
+          </form>
 
-      <form className="selection-form">
-        <h2 className="region">East Iceland</h2>
-        <select
-          name="city"
-          value={this.state.city}
-          onChange={this.handleChange}
-        >
-          <option key={3} value={''}>Pick a city</option>
-          {this.generateCities(eastIceland)}
-        </select>
-      </form>
+          <form className="selection-form">
+            <h2 className="region">East Iceland</h2>
+            <select
+              name="city"
+              value={this.state.city}
+              onChange={this.handleChange}
+            >
+              <option key={3} value={''}>Pick a city</option>
+              {this.generateCities(eastIceland)}
+            </select>
+            <button className="get-weather-button" type="button">Get weather</button>
+          </form>
 
-      <form className="selection-form">
-        <h2 className="region">West Iceland</h2>
-        <select
-          name="city"
-          value={this.state.city}
-          onChange={this.handleChange}
-        >
-          <option key={4} value={''}>Pick a city</option>
-          {this.generateCities(westIceland)}
-        </select>
-      </form>
-      </article>
+          <form className="selection-form">
+            <h2 className="region">West Iceland</h2>
+            <select
+              name="city"
+              value={this.state.city}
+              onChange={this.handleChange}
+            >
+              <option key={4} value={''}>Pick a city</option>
+              {this.generateCities(westIceland)}
+            </select>
+            <button className="get-weather-button" type="button">Get weather</button>
+          </form>
+        </article>
+      </section>
     )
   }
 }
