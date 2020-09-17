@@ -1,3 +1,7 @@
+const capitalize = (words) => {
+  return words.split(" ").map((word) => word.charAt(0).toUpperCase() + word.slice(1)).join(" ");
+};
+
 export const cleanData = (data) => {
   const weatherData = {
     cloudCover: data.clouds.all,
@@ -10,7 +14,7 @@ export const cleanData = (data) => {
     cityName: data.name,
     sunrise: data.sys.sunrise,
     sunset: data.sys.sunset,
-    description: data.weather[0].description,
+    description: capitalize(data.weather[0].description),
     windSpeed: data.wind.speed,
     windGust: data.wind.gust,
     windDirection: data.wind.deg,
@@ -18,3 +22,4 @@ export const cleanData = (data) => {
   return weatherData
 }
 
+// data.weather[0].description
