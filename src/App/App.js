@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import PropTypes from 'prop-types'
 import { BrowserRouter as Router, Route} from "react-router-dom";
 import '../App/App.css';
 
@@ -29,7 +28,7 @@ class App extends Component {
     return(
       <main className="App">
         <Header />
-        {/* <Form  /> */}
+        <Form  />
       </main>
     )
   }
