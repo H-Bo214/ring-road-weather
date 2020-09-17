@@ -1,0 +1,31 @@
+.DetailsPage h2 {
+  border:2px solid purple;
+  display: flex;
+  justify-content: center;
+}
+
+.weather-details-parent {
+  border: 2px solid cornflowerblue;
+  display: flex;
+  justify-content: space-evenly;
+
+}
+
+.weather-details {
+  border: 2px solid red;
+  width: 100%;
+}
+
+dd {
+  margin-left: 1em;
+}
+
+.category {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.category, h4, p {
+  margin:0;
+}

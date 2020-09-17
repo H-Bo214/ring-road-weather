@@ -29,7 +29,7 @@ class App extends Component {
   handleFetch = async (cityName) => {
    try {
     const data = await this.fetchWeather(cityName)
-
+    console.log('data', data)
     if (data) {
       const filteredData = this.cleanData(data)
       this.setState({currentWeather: filteredData })
@@ -57,8 +57,12 @@ class App extends Component {
         <Route
           exact path="/details-page"
           render={ () => {
-             return <DetailsPage currentWeather={this.state.currentWeather} favCities={this.state.favCities} />
-          }}
+            return (
+              <DetailsPage 
+                currentWeather={this.state.currentWeather} 
+                favCities={this.state.favCities} 
+              />
+            )}}
         />
       </main>
       </Router>
