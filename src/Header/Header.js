@@ -3,7 +3,7 @@ import '../Header/Header.css';
 import route1 from '../assets/route1.png'
 import { Link } from 'react-router-dom'
 
-function Header(props) {
+const Header = (props) => {
   return(
     <header>
       <Link to="/">
