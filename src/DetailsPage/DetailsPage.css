@@ -1,0 +1,55 @@
+.DetailsPage {
+  display: flex;
+  justify-content: center;
+}
+
+/* .DetailsPage {
+  display: flex;
+  flex-direction: column;
+} */
+
+.weather-details-parent {
+  /* border: 2px solid cornflowerblue; */
+  /* display: flex; */
+  /* justify-content: space-evenly; */
+  margin-top: 1em;
+  width: 25em;
+}
+
+.weather-details {
+  /* border: 2px solid red; */
+  width: 24em;
+  padding: 0 1em;
+  
+}
+
+dd {
+  margin-left: 1em;
+}
+
+.category {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-bottom: 1px solid gray;
+}
+
+.category, h4, p {
+  margin:0;
+}
+
+.current-weather {
+  width: 12em;
+  display: flex;
+  margin-left: 6em;
+  flex-direction: column;
+  align-items: center;
+  line-height: 1.2;
+}
+
+.city-header {
+  width: 20em;
+  /* border: 1px solid red; */
+  display: flex;
+  justify-content: center;
+}

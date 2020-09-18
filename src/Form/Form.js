@@ -1,13 +1,15 @@
 import React, { Component } from 'react'
 import '../Form/Form.css'
 import PropTypes from 'prop-types';
+import { Redirect } from 'react-router-dom'
 import { southIceland, eastIceland, northIceland, westIceland } from '../cityNames'
 
 class Form extends Component {
-  constructor() {
+  constructor(props) {
     super();
     this.state = {
       city: '',
+      redirectDetailPage: false,
     };
   };
 
@@ -17,6 +19,15 @@ class Form extends Component {
 
   generateCities = (region) => {
     return region.map(city => (<option className="city-names" key={city} value={city}>{city}</option>))
+  }
+
+  submitCityRequest = (event) => {
+    event.preventDefault()
+      const cityName = {
+        name: this.state.city
+      }
+    this.props.handleFetch(cityName.name)
+    this.setState({redirectDetailPage: true})
   }
 
   render() {
@@ -34,10 +45,29 @@ class Form extends Component {
               <option key={1} value={''}>Pick a city</option>
               {this.generateCities(northIceland)}
             </select>
-            <button className="get-weather-button" type="button">Get weather</button>
+            <button 
+              className="get-weather-button" 
+              type="button"
+              onClick={ (event) => this.submitCityRequest(event) }
+            >Get weather
+            </button>
+              {this.state.redirectDetailPage && <Redirect to="/details-page" />}
           </form>
 
-          <form className="selection-form">
+
+
+
+
+
+
+
+
+
+
+
+
+
+          {/* <form className="selection-form">
             <h2 className="region">South Iceland</h2>
             <select
               name="city"
@@ -74,7 +104,7 @@ class Form extends Component {
               {this.generateCities(westIceland)}
             </select>
             <button className="get-weather-button" type="button">Get weather</button>
-          </form>
+          </form> */}
         </article>
       </section>
     )
