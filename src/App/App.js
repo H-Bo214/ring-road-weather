@@ -11,19 +11,25 @@ import WeatherCard from '../WeatherCard/WeatherCard'
 
 class App extends Component {
   constructor() {
-    super();
+    super()
     this.state = {
       currentWeather: {},
-      fiveDayForecast: [],
       favCities: [],
       error: '',
-    };
+    }
+
     this.fetchWeather = fetchWeather
     this.cleanData = cleanData
+
   }
 
-  componentDidMount() {
-    
+  addToFavorites = (newCity) => {
+    this.setState({favCities:[...this.state.favCities, newCity]})
+  }
+
+  removeFavorite = (newCity) => {
+    const cityToRemove =  this.state.favCities.find(city => city === newCity)
+    this.setState({favCities: this.state.favCities.filter(city => city !== cityToRemove)})
   }
 
   handleFetch = async (cityName) => {
@@ -37,7 +43,6 @@ class App extends Component {
    } catch (error) {
      this.setState({error: 'An error occurred fetching weather.'})
    }
-
   }
 
   render() {
@@ -61,6 +66,9 @@ class App extends Component {
               <DetailsPage 
                 currentWeather={this.state.currentWeather} 
                 favCities={this.state.favCities} 
+                addToFavorites={this.addToFavorites}
+                isFavorite={this.state.favCities.includes(this.state.currentWeather.cityName)}
+                removeFavorite={this.removeFavorite}
               />
             )}}
         />
