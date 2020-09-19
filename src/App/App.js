@@ -78,7 +78,9 @@ class App extends Component {
             return(
               <FavoritesPage 
                 favCities={this.state.favCities}
-              
+                addToFavorites={this.addToFavorites}
+                isFavorite={this.state.favCities.includes(this.state.currentWeather.cityName)}
+                removeFavorite={this.removeFavorite}
               />
             )
 
