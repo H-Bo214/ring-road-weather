@@ -26,6 +26,10 @@ class App extends Component {
     
   }
 
+  addToFavorites = (newCity) => {
+    this.setState({favCities:[...this.state.favCities, newCity]})
+  }
+
   handleFetch = async (cityName) => {
    try {
     const data = await this.fetchWeather(cityName)
@@ -37,7 +41,6 @@ class App extends Component {
    } catch (error) {
      this.setState({error: 'An error occurred fetching weather.'})
    }
-
   }
 
   render() {
@@ -61,6 +64,8 @@ class App extends Component {
               <DetailsPage 
                 currentWeather={this.state.currentWeather} 
                 favCities={this.state.favCities} 
+                addToFavorites={this.addToFavorites}
+                isFavorite={this.state.favCities.includes(this.state.currentWeather.cityName)}
               />
             )}}
         />

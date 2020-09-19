@@ -16,6 +16,7 @@ export const cleanData = (data) => {
     sunset: data.sys.sunset,
     description: capitalize(data.weather[0].description),
     windSpeed: data.wind.speed,
+    id:data.id,
   }
   return weatherData
 }

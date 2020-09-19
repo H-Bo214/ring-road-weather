@@ -1,9 +1,12 @@
 import React from 'react'
 import '../WeatherCard/WeatherCard.css'
+import star from '../assets/star.svg'
+import starActive from '../assets/starActive.svg'
 
 function WeatherCard(props) {
   return (
     <section>
+  
         <div className="current-weather">
         <h3 className="city-header">{`Today's weather in ${props.cityName}`}</h3>
           <p>{props.description}</p>

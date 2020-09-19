@@ -53,3 +53,12 @@ dd {
   display: flex;
   justify-content: center;
 }
+
+.star {
+  width: 4em;
+  height: 4em;
+}
+
+.star img {
+  width: 100%;
+}
