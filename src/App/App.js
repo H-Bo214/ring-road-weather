@@ -7,7 +7,6 @@ import Header from '../Header/Header'
 import DetailsPage from '../DetailsPage/DetailsPage'
 import FavoritesPage from '../FavoritesPage/FavoritesPage'
 import Form from '../Form/Form'
-import WeatherCard from '../WeatherCard/WeatherCard'
 
 class App extends Component {
   constructor() {
@@ -71,6 +70,20 @@ class App extends Component {
                 removeFavorite={this.removeFavorite}
               />
             )}}
+        />
+
+        <Route 
+          exact path="/favorites"
+          render={ () => {
+            return(
+              <FavoritesPage 
+                favCities={this.state.favCities}
+              
+              />
+            )
+
+          }}
+        
         />
       </main>
       </Router>
