@@ -15,7 +15,7 @@ function Header(props) {
       </Link>
       <h1>Ring Road Weather!</h1>
       <Link to="/favorites">
-        <button className="header-fav-btn" type="button">Favorites</button>
+        <button className="header-fav-btn" type="button">Go to Favorites</button>
       </Link>
     </header>
   )
