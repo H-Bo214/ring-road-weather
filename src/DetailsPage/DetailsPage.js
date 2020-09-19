@@ -2,44 +2,33 @@ import React, { Component } from 'react'
 import { BrowserRouter as Router, Route, Link } from "react-router-dom"
 import PropTypes from 'prop-types'
 import '../DetailsPage/DetailsPage.css'
-import '../WeatherCard/WeatherCard'
-import WeatherCard from '../WeatherCard/WeatherCard'
 import star from '../assets/star.svg'
 import starActive from '../assets/starActive.svg'
 
-class DetailsPage extends Component {
-  constructor() {
-    super();
-    this.state = {
-      comments: '',
-      allComments: [],
+  function DetailsPage({ currentWeather, favCities, addToFavorites, isFavorite, removeFavorite }) {
+    const  {
+        cloudCover,
+        time,
+        feelsLike,
+        humidity,
+        temperature,
+        todayHigh,
+        todayLow,
+        cityName,
+        sunrise,
+        sunset,
+        description,
+        windSpeed,
+        id,} = currentWeather
+
+    const handleFavorite = (cityName) => {
+      if (!favCities.includes(cityName)) {
+        addToFavorites(cityName)
+      } else {
+        removeFavorite(cityName)
+      }
     }
 
-  };
-
-  handleFavorite = (cityName) => {
-    let { favCities, addToFavorites } = this.props
-    if (!favCities.includes(cityName)) {
-      addToFavorites(cityName)
-    }
-  }
-
-  render() {
-  const {
-    cloudCover,
-    time,
-    feelsLike,
-    humidity,
-    temperature,
-    todayHigh,
-    todayLow,
-    cityName,
-    sunrise,
-    sunset,
-    description,
-    windSpeed,
-    id,
-  } = this.props.currentWeather;
     return(
       <section className="DetailsPage">
         <section>
@@ -49,10 +38,10 @@ class DetailsPage extends Component {
               <button 
                 className="star"
                 type="button"
-                onClick={ () => this.handleFavorite(cityName)}
+                onClick={ () => handleFavorite(cityName)}
               >
                 <img 
-                  src={this.props.isFavorite ? starActive: star} 
+                  src={isFavorite ? starActive: star} 
                   alt="star icon outlined"
                 />
               </button>
@@ -96,7 +85,5 @@ class DetailsPage extends Component {
       </section>
     )
   }
-};
 
-export default DetailsPage;
-
+export default DetailsPage
