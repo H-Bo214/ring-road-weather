@@ -13,57 +13,86 @@ class DetailsPage extends Component {
     this.state = {
       comments: '',
       allComments: [],
-      
     }
 
   };
 
   handleFavorite = (cityName) => {
-    this.props.addToFavorites(cityName)
+    let { favCities, addToFavorites } = this.props
+    if (!favCities.includes(cityName)) {
+      addToFavorites(cityName)
+    }
   }
 
   render() {
-
-    const {
-      cloudCover,
-      time,
-      feelsLike,
-      humidity,
-      temperature,
-      todayHigh,
-      todayLow,
-      cityName,
-      sunrise,
-      sunset,
-      description,
-      windSpeed,
-      id,
-    } = this.props.currentWeather;
-    console.log('cityID', id)
+  const {
+    cloudCover,
+    time,
+    feelsLike,
+    humidity,
+    temperature,
+    todayHigh,
+    todayLow,
+    cityName,
+    sunrise,
+    sunset,
+    description,
+    windSpeed,
+    id,
+  } = this.props.currentWeather;
     return(
       <section className="DetailsPage">
-        <button 
-          className="star"
-          type="button"
-          onClick={ () => this.handleFavorite(cityName)}
-        >
-          <img src={this.props.isFavorite ? starActive: star} alt="star icon outlined"/>
-        </button>
-        <WeatherCard 
-          cloudCover={cloudCover}
-          time={time}
-          feelsLike={feelsLike}
-          humidity={humidity}
-          temperature={temperature}
-          todayHigh={todayHigh}
-          todayLow={todayLow}
-          cityName={cityName}
-          sunrise={sunrise}
-          sunset={sunset}
-          description={description}
-          windSpeed={windSpeed}
-          id={id}
-        />
+        <section>
+          <div className="current-weather">
+            <div className="city-header-parent">
+              <h3 className="city-header">{`Today's weather in ${cityName}`}</h3>
+              <button 
+                className="star"
+                type="button"
+                onClick={ () => this.handleFavorite(cityName)}
+              >
+                <img 
+                  src={this.props.isFavorite ? starActive: star} 
+                  alt="star icon outlined"
+                />
+              </button>
+            </div>
+          </div>
+          <div className="description">
+            <p>{description}</p>
+            <p>{time}</p>
+          </div>
+          <section className="weather-details"> 
+            <div className="category">
+              <h4>Temperature:</h4>
+              <p>{temperature}°</p>
+            </div>
+            <div className="category">
+              <h4>Feels like:</h4>
+              <p>{feelsLike}°</p>
+            </div>
+            <div className="category">
+              <h4>Cloud cover:</h4>
+              <p>{cloudCover}%</p>
+            </div>
+            <div className="category">
+              <h4>Humidity:</h4>
+              <p>{humidity}%</p>
+            </div>
+            <div className="category">
+              <h4>Wind:</h4>
+              <p>{windSpeed}mph</p>
+            </div>
+            <div className="category">
+              <h4>High/Low:</h4>
+              <p>{todayHigh}°/{todayLow}°</p>
+            </div>
+            <div className="category">
+              <h4>Sunrise/Sunset:</h4>
+              <p>{sunrise}/{sunset}</p>
+            </div>
+          </section>
+        </section>
       </section>
     )
   }
