@@ -19,7 +19,7 @@ import starActive from '../assets/starActive.svg'
         sunset,
         description,
         windSpeed,
-        id,} = currentWeather
+    } = currentWeather
 
     const handleFavorite = (cityName) => {
       if (!favCities.includes(cityName)) {
