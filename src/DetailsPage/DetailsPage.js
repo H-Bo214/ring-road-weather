@@ -93,4 +93,5 @@ import starActive from '../assets/starActive.svg'
     isFavorite: PropTypes.bool,
     removeFavorite: PropTypes.func,
   }
+  
 export default DetailsPage
