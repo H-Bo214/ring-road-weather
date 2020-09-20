@@ -57,6 +57,13 @@ dd {
 .star {
   width: 4em;
   height: 4em;
+  cursor: pointer;
+  
+  
+}
+
+.star:hover {
+  transform: scale(1.1);
 }
 
 .star img {
@@ -78,3 +85,15 @@ dd {
   flex-direction: column;
   align-items: center;
 }
+
+
+
+
+
+
+
+
+
+
+
+
