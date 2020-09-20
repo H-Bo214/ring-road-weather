@@ -74,4 +74,7 @@ class Form extends Component {
   }
 }
 
+Form.propTypes = {
+  handleFetch: PropTypes.func
+}
 export default Form;
