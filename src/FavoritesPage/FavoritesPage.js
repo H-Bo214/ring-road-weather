@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { cleanData } from '../cleanData'
 import { fetchWeather } from '../apiCalls'
 import DetailsPage from '../DetailsPage/DetailsPage'
+import PropTypes from 'prop-types'
 
 class FavoritesPage extends Component {
   constructor() {
@@ -28,7 +29,6 @@ class FavoritesPage extends Component {
   }
 
   displayFavorites() {
-    
    return this.state.favCitiesData.map(city => {
      console.log('city', city)
       return(
@@ -51,11 +51,16 @@ class FavoritesPage extends Component {
       <div style={{width: '100%', overflow:'scroll'}}>
         {this.displayFavorites()}
       </div>
-      
     )
-
   }
   
+}
+
+FavoritesPage.propTypes = {
+  favCities: PropTypes.array,
+  addToFavorites: PropTypes.func,
+  isFavorite: PropTypes.bool,
+  removeFavorite: PropTypes.func,
 }
 
 export default FavoritesPage

@@ -13,9 +13,9 @@ function Header(props) {
           alt="road sign for Iceland's Route 1"
         />
       </Link>
-      <h1>Ring Road Weather!</h1>
+      <h1>Ring Road Weather</h1>
       <Link to="/favorites">
-        <button className="header-fav-btn" type="button">Go to Favorites</button>
+        <button className="header-fav-btn" type="button">See favorites</button>
       </Link>
     </header>
   )

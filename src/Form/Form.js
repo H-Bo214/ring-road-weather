@@ -40,7 +40,9 @@ class Form extends Component {
   render() {
     return(
       <section>
-        <h2 className="subtitle">Your guide to weather along Iceland's ring road!</h2>
+        <div className="guide-to">
+          <h2 className="subtitle">Your guide to weather along Iceland's ring road</h2>
+        </div>
         <article className="form-parent">
           <form className="selection-form">
             <h2 className="region">{this.state.region}</h2>
@@ -74,4 +76,7 @@ class Form extends Component {
   }
 }
 
+Form.propTypes = {
+  handleFetch: PropTypes.func
+}
 export default Form;

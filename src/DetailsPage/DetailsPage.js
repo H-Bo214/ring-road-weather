@@ -19,7 +19,7 @@ import starActive from '../assets/starActive.svg'
         sunset,
         description,
         windSpeed,
-        id,} = currentWeather
+    } = currentWeather
 
     const handleFavorite = (cityName) => {
       if (!favCities.includes(cityName)) {
@@ -31,7 +31,7 @@ import starActive from '../assets/starActive.svg'
 
     return(
       <section className="DetailsPage">
-        <section>
+        <section className="current-weather-parent">
           <div className="current-weather">
             <div className="city-header-parent">
               <h3 className="city-header">{`Today's weather in ${cityName}`}</h3>
@@ -86,4 +86,12 @@ import starActive from '../assets/starActive.svg'
     )
   }
 
+  DetailsPage.propTypes = {
+    currentWeather: PropTypes.object,
+    favCities: PropTypes.array,
+    addToFavorites: PropTypes.func,
+    isFavorite: PropTypes.bool,
+    removeFavorite: PropTypes.func,
+  }
+  
 export default DetailsPage

@@ -1,26 +1,11 @@
 .DetailsPage {
   display: flex;
   justify-content: center;
+  height: 100vh;
 }
 
-/* .DetailsPage {
-  display: flex;
-  flex-direction: column;
-} */
-
-.weather-details {
-  /* border: 2px solid cornflowerblue; */
-  /* display: flex; */
-  /* justify-content: space-evenly; */
-  margin-top: 1em;
-  width: 25em;
-}
-
-.weather-details {
-  /* border: 2px solid red; */
-  /* width: 24em;
-  padding: 0 1em;
-   */
+.weather-details { 
+  line-height: 2.5;
 }
 
 dd {
@@ -39,24 +24,28 @@ dd {
 }
 
 .current-weather {
-  /* width: 12em;
-  display: flex;
-  margin-left: 6em;
-  flex-direction: column;
-  align-items: center; */
   line-height: 1.2;
 }
 
-.city-header {
-  /* width: 20em; */
-  /* border: 1px solid red; */
-  /* display: flex;
-  justify-content: center; */
+.current-weather-parent {
+  background: #fff;
+  margin-top: 3em;
+  opacity: .7;
+  width: 30em;
+  height: 32em;
+  padding: 3em;
+  border-radius: 4px;
 }
 
 .star {
   width: 4em;
   height: 4em;
+  cursor: pointer;
+  background: #85F6BF;
+}
+
+.star:hover {
+  transform: scale(1.1);
 }
 
 .star img {
@@ -66,15 +55,27 @@ dd {
 .city-header-parent {
   display: flex;
   justify-content: space-between;
-  padding-top: 4em;
-}
-
-.city-header-parent h3 {
-
+  padding-bottom: 1em;
 }
 
 .description {
   display: flex;
-  flex-direction: column;
   align-items: center;
+  justify-content: space-between;
 }
+
+.description p {
+  line-height: 2;
+}
+
+
+
+
+
+
+
+
+
+
+
+
