@@ -44,20 +44,24 @@ describe('Form', () => {
     expect(selectRegion).toBeInTheDocument()
 
     fireEvent.change(selectRegion, {target:{value:'South Iceland'}})
-    
+
     const southIceland = screen.getByRole('option', {name: 'South Iceland'})
     expect(southIceland).toBeInTheDocument()
     expect(selectRegion.value).toBe('South Iceland')
   })
 
+  it('should have a get weather button', () => {
+    const button = screen.getByRole('button')
+    expect(button).toBeInTheDocument()
+  })
 
+  it('should fire a fetch request on button click', () => {
+    const button = screen.getByRole('button')
+    expect(button).toBeInTheDocument()
 
-  // it('should have a get weather button', () => {
-  //   const button = screen.getByRole('button')
-  //   expect(button).toBeInTheDocument()
-  // })
-
-
+    fireEvent.click(button)
+    expect(handleFetch).toHaveBeenCalledTimes(1)
+  })
 
 
 
