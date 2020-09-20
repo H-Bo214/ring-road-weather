@@ -1,5 +1,5 @@
 import React from 'react'
-import { render, screen } from '@testing-library/react'
+import { fireEvent, render, screen } from '@testing-library/react'
 import '@testing-library/jest-dom'
 import DetailsPage from '../DetailsPage/DetailsPage'
 import { MemoryRouter } from 'react-router-dom'
@@ -25,8 +25,8 @@ describe('DetailsPage', () => {
 
   addToFavorites = jest.fn()
   removeFavorite = jest.fn()
-  isFavorite = false
-  favCities = []
+  isFavorite = false   //Ask Quinn how or why I would test these?
+  favCities = []       //Ask Quinn how or why I would test these?
   render(
     <MemoryRouter>
       <DetailsPage
@@ -46,6 +46,22 @@ describe('DetailsPage', () => {
     expect(h3).toBeInTheDocument()
     expect(button).toBeInTheDocument()
       
+  })
+
+  it('should render a favorite button',  () => {
+    const star = screen.getByRole('button')
+    expect(star).toBeInTheDocument()
+  })
+
+  it('should add to favorites when favorited',  () => {
+    const star = screen.getByRole('button')
+    expect(star).toBeInTheDocument()
+
+    const starImage = screen.getByRole('img')
+    expect(starImage).toBeInTheDocument()
+
+    fireEvent.click(star)
+    expect(addToFavorites).toHaveBeenCalledTimes(1)
   })
 
   it('should have a weather description and time',  () => {
