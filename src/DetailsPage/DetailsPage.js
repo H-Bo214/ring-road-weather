@@ -86,4 +86,11 @@ import starActive from '../assets/starActive.svg'
     )
   }
 
+  DetailsPage.propTypes = {
+    currentWeather: PropTypes.object,
+    favCities: PropTypes.array,
+    addToFavorites: PropTypes.func,
+    isFavorite: PropTypes.bool,
+    removeFavorite: PropTypes.func,
+  }
 export default DetailsPage
