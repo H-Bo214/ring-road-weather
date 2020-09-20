@@ -31,7 +31,7 @@ import starActive from '../assets/starActive.svg'
 
     return(
       <section className="DetailsPage">
-        <section>
+        <section className="current-weather-parent">
           <div className="current-weather">
             <div className="city-header-parent">
               <h3 className="city-header">{`Today's weather in ${cityName}`}</h3>

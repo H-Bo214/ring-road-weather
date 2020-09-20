@@ -1,11 +1,12 @@
 .subtitle {
   text-align: center;
+  color: #FAFFFF;
 }
 
 .form-parent {
   display: flex;
   justify-content: center;
-  height: 50vh;
+  height: 100vh;
 }
 
 .selection-form {
@@ -13,9 +14,11 @@
   flex-direction: column;
   align-items: center;
   width: 17em;
-  background:#1F4250;
+  background:#2C6472;
   padding-top: 3em;
   border-radius: 8px;
+  height: 25em;
+  opacity: .88;
 }
 
 .region {
@@ -45,8 +48,11 @@ form button {
   transform: scale(1.1);
 } */
 
-.description {
+.guide-to {
   display: flex;
+  margin-bottom: 2em;
+  justify-content: center;
+  margin-top: 3em;
 }
 
 .get-weather-button {

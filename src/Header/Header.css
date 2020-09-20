@@ -1,10 +1,13 @@
 header {
-  border: 2px solid #000;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0rem 1rem;
   padding-top: 1em;
+  background: #172223;
+  color: #FAFFFF;
+  opacity: .8;
+  padding-bottom: 1em;
 }
 
 header h1 {
@@ -15,14 +18,14 @@ header h1 {
 }
 
 .header-fav-btn {
-  background: #fff;
   color: #2c2c2c;
   cursor: pointer;
   border-radius: 10px;
-  /* width: 100px; */
   height: 50px;
   font-size: 16px;
-  
+  background: #85F6BF;
+  width: 9em;
+  font-weight: 700;
 }
 
 .header-fav-btn:hover {

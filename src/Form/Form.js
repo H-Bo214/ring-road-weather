@@ -40,8 +40,8 @@ class Form extends Component {
   render() {
     return(
       <section>
-        <div className="description">
-          <h2 className="subtitle">Your guide to weather along Iceland's ring road!</h2>
+        <div className="guide-to">
+          <h2 className="subtitle">Your guide to weather along Iceland's ring road</h2>
         </div>
         <article className="form-parent">
           <form className="selection-form">

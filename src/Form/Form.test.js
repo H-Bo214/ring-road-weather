@@ -20,7 +20,7 @@ describe('Form', () => {
   })
 
   it('should render a heading', () => {
-    const h2= screen.getByText('Your guide to weather along Iceland\'s ring road!')
+    const h2= screen.getByText('Your guide to weather along Iceland\'s ring road')
     expect(h2).toBeInTheDocument()
   })
 

@@ -12,8 +12,8 @@ describe('Header', () => {
       </MemoryRouter>
     )
     const img = screen.getByRole('img', {name: 'road sign for Iceland\'s Route 1'})
-    const title = screen.getByRole('heading', {name: 'Ring Road Weather!'})
-    const favButton = screen.getByRole('button', {name: 'Go to Favorites'})
+    const title = screen.getByRole('heading', {name: 'Ring Road Weather'})
+    const favButton = screen.getByRole('button', {name: 'See favorites'})
 
     expect(img).toBeInTheDocument()
     expect(title).toBeInTheDocument()
