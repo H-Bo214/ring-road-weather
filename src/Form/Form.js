@@ -59,7 +59,7 @@ class Form extends Component {
               value={this.state.city}
               onChange={this.handleChange}
             >
-              <option key={1} value={''}>Pick a city</option>
+              <option className="choices" key={1} value={''}>Pick a city</option>
               {this.state.region && this.locateCities(allCities)}
             </select>
             <button 

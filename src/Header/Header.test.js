@@ -20,24 +20,4 @@ describe('Header', () => {
     expect(favButton).toBeInTheDocument()
   })
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 })
