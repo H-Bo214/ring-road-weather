@@ -18,8 +18,8 @@ class Form extends Component {
     this.setState({ [event.target.name]: event.target.value })
   }
 
-  generateData = (region) => {
-    return region.map(city => (<option className="city-names" key={city} value={city}>{city}</option>))
+  generateData = (listItems) => {
+    return listItems.map(item => (<option className="city-names" key={item} value={item}>{item}</option>))
   }
 
   locateCities = (allCities) => {
@@ -41,11 +41,15 @@ class Form extends Component {
     return(
       <section>
         <div className="guide-to">
-          <h2 className="subtitle">Your guide to weather along Iceland's ring road</h2>
+          <h2 className="subtitle">Your guide to weather along Iceland's ring road</h˝2>
         </div>
         <article className="form-parent">
           <form className="selection-form">
-            <h2 className="region">{this.state.region}</h2>
+              {this.state.region ? 
+              <h3 className="region-select" >
+                {this.state.region}
+              </h3>:
+              <h3 className="region-select">Pick a region</h3>}
             <select
               name="region"
               value={this.state.region}
@@ -80,3 +84,5 @@ Form.propTypes = {
   handleFetch: PropTypes.func
 }
 export default Form;
+
+//CURRENT BUG :  CLICKING GET WEATHER BUTTON W/O PICKING STILL EXECUTES FTE

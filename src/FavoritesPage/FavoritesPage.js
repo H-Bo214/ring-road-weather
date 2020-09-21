@@ -17,7 +17,6 @@ class FavoritesPage extends Component {
     for (let cityName of this.props.favCities) {
       try {
         const data = await fetchWeather(cityName)
-        console.log('data', data)
         if (data) {
           const filteredData = cleanData(data)
           this.setState({favCitiesData: [...this.state.favCitiesData, filteredData]})
@@ -30,10 +29,10 @@ class FavoritesPage extends Component {
 
   displayFavorites() {
    return this.state.favCitiesData.map(city => {
-     console.log('city', city)
+    //  console.log('city', city)
       return(
         <DetailsPage 
-        key={Date.now()}
+        key={city.id}
         currentWeather={city} 
         favCities={this.props.favCities} 
         addToFavorites={this.props.addToFavorites}
@@ -46,7 +45,6 @@ class FavoritesPage extends Component {
   }
 
   render() {
-    console.log('favCitiesData', this.state.favCitiesData)
     return (
       <div style={{width: '100%', overflow:'scroll'}}>
         {this.displayFavorites()}
