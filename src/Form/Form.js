@@ -41,7 +41,7 @@ class Form extends Component {
     return(
       <section>
         <div className="guide-to">
-          <h2 className="subtitle">Your guide to weather along Iceland's ring road</h˝2>
+          <h2 className="subtitle">Your guide to weather along Iceland's ring road</h2>
         </div>
         <article className="form-parent">
           <form className="selection-form">

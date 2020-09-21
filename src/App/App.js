@@ -8,6 +8,10 @@ import DetailsPage from '../DetailsPage/DetailsPage'
 import FavoritesPage from '../FavoritesPage/FavoritesPage'
 import Form from '../Form/Form'
 
+let dayjs = require('dayjs')
+//import dayjs from 'dayjs' // ES 2015
+dayjs().format()
+
 class App extends Component {
   constructor() {
     super()
@@ -34,7 +38,6 @@ class App extends Component {
   handleFetch = async (cityName) => {
    try {
     const data = await this.fetchWeather(cityName)
-    console.log('data', data)
     if (data) {
       const filteredData = this.cleanData(data)
       this.setState({currentWeather: filteredData })

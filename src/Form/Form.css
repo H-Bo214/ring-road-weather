@@ -21,11 +21,11 @@
   opacity: .88;
 }
 
-.region {
+.region-select {
   color: #FAFFFF;
   padding-bottom: 7px;
+  font-size: 27px;
 }
-
 select {
   font-size: 16px;
   margin-bottom: 2em;
@@ -44,9 +44,7 @@ form button {
   
 }
 
-/* form button :hover {
-  transform: scale(1.1);
-} */
+
 
 .guide-to {
   display: flex;
@@ -61,4 +59,8 @@ form button {
   margin-top: .8em;
   padding-bottom: .4em;
   font-weight: 700;
+}
+
+.get-weather-button:hover {
+  transform: scale(1.1);
 }
