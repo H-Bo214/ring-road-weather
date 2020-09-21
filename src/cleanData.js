@@ -20,5 +20,3 @@ export const cleanData = (data) => {
   }
   return weatherData
 }
-
-// data.weather[0].description
