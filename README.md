@@ -40,6 +40,7 @@ Users can select a specific region of Iceland. Once a region has been selected, 
 ### App Demo
 ![Choosing a region and city](https://media.giphy.com/media/U8HjKcSOva4QIEokwv/giphy.gif)</br>
 *User selects a region and city on page load*
+
 ### Credits
 * All weather data from [OpenWeather](https://openweathermap.org/)
 ![Choosing a region and city](https://media.giphy.com/media/F772E7DUwP4BUnLbYB/giphy.gif)</br>
