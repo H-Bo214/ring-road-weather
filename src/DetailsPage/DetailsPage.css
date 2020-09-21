@@ -22,6 +22,9 @@ dd {
 .category, h4, p {
   margin:0;
 }
+.category p {
+  font-weight: 700;
+}
 
 .current-weather {
   line-height: 1.2;
@@ -42,6 +45,7 @@ dd {
   height: 4em;
   cursor: pointer;
   background: #85F6BF;
+  border-radius: 50%;
 }
 
 .star:hover {
@@ -49,7 +53,7 @@ dd {
 }
 
 .star img {
-  width: 100%;
+  width: 85%;
 }
 
 .city-header-parent {

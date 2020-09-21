@@ -1,5 +1,4 @@
-import React, { Component } from 'react'
-import { BrowserRouter as Router, Route, Link } from "react-router-dom"
+import React from 'react'
 import PropTypes from 'prop-types'
 import '../DetailsPage/DetailsPage.css'
 import star from '../assets/star.svg'
@@ -70,15 +69,15 @@ import starActive from '../assets/starActive.svg'
             </div>
             <div className="category">
               <h4>Wind:</h4>
-              <p>{windSpeed}mph</p>
+              <p>{windSpeed} mph</p>
             </div>
             <div className="category">
               <h4>High/Low:</h4>
-              <p>{todayHigh}°/{todayLow}°</p>
+              <p>{todayHigh}°  /  {todayLow}°</p>
             </div>
             <div className="category">
               <h4>Sunrise/Sunset:</h4>
-              <p>{sunrise}/{sunset}</p>
+              <p>{sunrise}  /  {sunset}</p>
             </div>
           </section>
         </section>

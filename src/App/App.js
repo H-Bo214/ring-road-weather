@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import { BrowserRouter as Router, Route, Redirect} from "react-router-dom";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 import '../App/App.css';
 import { cleanData } from '../cleanData'
 import { fetchWeather } from '../apiCalls'
@@ -7,6 +7,10 @@ import Header from '../Header/Header'
 import DetailsPage from '../DetailsPage/DetailsPage'
 import FavoritesPage from '../FavoritesPage/FavoritesPage'
 import Form from '../Form/Form'
+
+let dayjs = require('dayjs')
+//import dayjs from 'dayjs' // ES 2015
+dayjs().format()
 
 class App extends Component {
   constructor() {
@@ -34,7 +38,6 @@ class App extends Component {
   handleFetch = async (cityName) => {
    try {
     const data = await this.fetchWeather(cityName)
-    console.log('data', data)
     if (data) {
       const filteredData = this.cleanData(data)
       this.setState({currentWeather: filteredData })
