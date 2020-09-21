@@ -24,7 +24,6 @@ Users can select a specific region of Iceland. Once a region has been selected, 
 - Git VCS
 - GitHub Projects
 - Async JavaScript
-### Installation Instructions
 
 ### App Demo
 
