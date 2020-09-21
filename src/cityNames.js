@@ -7,11 +7,13 @@ export const allCities = {
     'Hvolsvollur',
     'Vik',
   ],
+
   'North Iceland': [
     'Reykjahlíð',
     'Akureyri',
     'Möðruvellir',
   ],
+
   'East Iceland': [
     'Bjarnanes',
     'hofn',
@@ -20,6 +22,7 @@ export const allCities = {
     'Egilsstaðir',
     'Fellabær',
   ],
+  
   'West Iceland': [
     'Borgarnes',
     'Hofn',

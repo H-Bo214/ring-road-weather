@@ -11,7 +11,5 @@
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  /* opacity: 0.91; */
   box-shadow: 0 3000px rgba(0, 0, 0, 0.3) inset;
-
 } 

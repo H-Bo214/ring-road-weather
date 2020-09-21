@@ -1,11 +1,8 @@
 import React from 'react';
 import { fireEvent, render, screen, waitFor } from '@testing-library/react'
 import '@testing-library/jest-dom'
-import { MemoryRouter, BrowserRouter } from 'react-router-dom'
+import { MemoryRouter } from 'react-router-dom'
 import App from '../App/App';
-import Form from '../Form/Form';
-import star from '../assets/star.svg'
-import starActive from '../assets/starActive.svg'
 import { fetchWeather } from '../apiCalls'
 jest.mock('../apiCalls')
 
@@ -251,7 +248,6 @@ describe('App', () => {
     expect(myFavs).toHaveLength(1)
 
     fireEvent.click(seeFavorites[0])
-    
     
     const h3 = await waitFor(()=> screen.getByText('Today\'s weather in Reykjavik'))
     favButton = screen.getAllByRole('button', {value: addToFavs})

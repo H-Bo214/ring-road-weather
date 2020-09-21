@@ -29,7 +29,6 @@ class FavoritesPage extends Component {
 
   displayFavorites() {
    return this.state.favCitiesData.map(city => {
-    //  console.log('city', city)
       return(
         <DetailsPage 
         key={city.id}
@@ -40,7 +39,6 @@ class FavoritesPage extends Component {
         removeFavorite={this.props.removeFavorite}
         />
       )
-
     })
   }
 

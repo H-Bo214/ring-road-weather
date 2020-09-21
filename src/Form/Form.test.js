@@ -7,15 +7,13 @@ import { MemoryRouter } from 'react-router-dom'
 describe('Form', () => {
   let handleFetch
   beforeEach( () => {
-
-
     handleFetch = jest.fn()
     render(
-    <MemoryRouter>
-      <Form 
-      handleFetch={handleFetch}
-      />
-    </MemoryRouter>
+      <MemoryRouter>
+        <Form 
+        handleFetch={handleFetch}
+        />
+      </MemoryRouter>
     ) 
   })
 
@@ -62,16 +60,5 @@ describe('Form', () => {
     fireEvent.click(button)
     expect(handleFetch).toHaveBeenCalledTimes(1)
   })
-
-
-
-
-
-
-
-
-
-
-
 
 })

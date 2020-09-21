@@ -25,8 +25,8 @@ describe('DetailsPage', () => {
 
   addToFavorites = jest.fn()
   removeFavorite = jest.fn()
-  isFavorite = false   //Ask Quinn how or why I would test these?
-  favCities = []       //Ask Quinn how or why I would test these?
+  isFavorite = false   
+  favCities = []       
   render(
     <MemoryRouter>
       <DetailsPage
@@ -45,7 +45,6 @@ describe('DetailsPage', () => {
     const button = screen.getByRole('button')
     expect(h3).toBeInTheDocument()
     expect(button).toBeInTheDocument()
-      
   })
 
   it('should render a favorite button',  () => {
