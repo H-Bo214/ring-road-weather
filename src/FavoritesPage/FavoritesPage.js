@@ -46,7 +46,7 @@ class FavoritesPage extends Component {
 
   render() {
     return (
-      <div style={{width: '100%', overflow:'scroll'}}>
+      <div>
         {this.displayFavorites()}
       </div>
     )

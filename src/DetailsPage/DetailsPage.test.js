@@ -101,21 +101,21 @@ describe('DetailsPage', () => {
 
   it('should have a wind speed',  () => {
     const title = screen.getByText('Wind:')
-    const wind = screen.getByText('25mph')
+    const wind = screen.getByText('25 mph')
     expect(title).toBeInTheDocument()
     expect(wind).toBeInTheDocument()
   })
 
   it('should have a high and a low temperature',  () => {
     const title = screen.getByText('High/Low:')
-    const highLow = screen.getByText('70°/50°')
+    const highLow = screen.getByText('70° / 50°')
     expect(title).toBeInTheDocument()
     expect(highLow).toBeInTheDocument()
   })
 
   it('should have a sunrise and sunset time',  () => {
     const title = screen.getByText('Sunrise/Sunset:')
-    const sunriseSunset = screen.getByText('1600498986/1600544371')
+    const sunriseSunset = screen.getByText('1600498986 / 1600544371')
     expect(title).toBeInTheDocument()
     expect(sunriseSunset).toBeInTheDocument()
   })
