@@ -5,7 +5,7 @@ import { Redirect } from 'react-router-dom'
 import { regions, allCities } from '../cityNames'
 
 class Form extends Component {
-  constructor(props) {
+  constructor() {
     super();
     this.state = {
       region: '',
@@ -83,6 +83,4 @@ class Form extends Component {
 Form.propTypes = {
   handleFetch: PropTypes.func
 }
-export default Form;
-
-//CURRENT BUG :  CLICKING GET WEATHER BUTTON W/O PICKING STILL EXECUTES FTE
+export default Form

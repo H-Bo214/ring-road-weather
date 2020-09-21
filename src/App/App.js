@@ -1,16 +1,12 @@
 import React, {Component} from 'react';
 import { BrowserRouter as Router, Route } from "react-router-dom";
-import '../App/App.css';
 import { cleanData } from '../cleanData'
 import { fetchWeather } from '../apiCalls'
 import Header from '../Header/Header'
 import DetailsPage from '../DetailsPage/DetailsPage'
 import FavoritesPage from '../FavoritesPage/FavoritesPage'
 import Form from '../Form/Form'
-
-let dayjs = require('dayjs')
-//import dayjs from 'dayjs' // ES 2015
-dayjs().format()
+import '../App/App.css';
 
 class App extends Component {
   constructor() {
@@ -52,7 +48,6 @@ class App extends Component {
       <Router>
       <main className="App">
         <Header />
-
         <Route
           exact path ="/"
           render={ () => {
@@ -74,7 +69,6 @@ class App extends Component {
               />
             )}}
         />
-
         <Route 
           exact path="/favorites"
           render={ () => {
@@ -86,9 +80,7 @@ class App extends Component {
                 removeFavorite={this.removeFavorite}
               />
             )
-
           }}
-        
         />
       </main>
       </Router>

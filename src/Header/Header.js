@@ -3,7 +3,7 @@ import '../Header/Header.css';
 import route1 from '../assets/route1.png'
 import { Link } from 'react-router-dom'
 
-function Header(props) {
+function Header() {
   return(
     <header>
       <Link to="/">
@@ -22,4 +22,3 @@ function Header(props) {
 }
 
 export default Header
-
