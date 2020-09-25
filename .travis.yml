@@ -1,5 +1,11 @@
 language: node_js
 node_js:
-  - "node"
+- node
 notifications:
   email: false
+deploy:
+  provider: heroku
+  api_key:
+    secure: fTlKGISUWhs4bglUvVTsV4r/ESmPFY/1YTjHtcyKv6mXlCtyngJbJ7HV+iWdUPBEtO6lr8kyqJhyexws/blHpdpwrphVk150y2/Ewg+0DCTN3S91bL8KfV8BCcKIE2TMtNqdU1cM4sbr6abPl5VDivGKDTysVxVAIllpQLXrxnUuQC4KmyIXrGc23+nzHFEAoJt/8Ph15ENX7h017nUcAh/3zuT4F0wtKtmnJNRKByGAHOXAi48zihnEiUFmS9b7dItn+3HL11IhQ6bphuVIgrKt3jNUTJyGICDAHqxSH9MzC6U3IKsSkWFj45PDMLzJzbMQNOcf4xZTUuv5LPMURXxIeH08fh51jT2gYRWaXlXK8b3d6IXz+iZ9JQZ4cxNO75CkjGQJPGqld1A7pElpBtTv4YvehsC3O+1Ufk2ag1ZhEj09ZAdu8er1qDgL5q2FBHD2Smnp0mf9kGKL0rLirKQCCjegzQNtCQOKXXm75f8y+IurZzBhYYqqU+ARc5VPT1gnIQNJpie30RXAM1anT2M/MwYbIMifjTGHjzHnDNGmd3MzIehWvwS8DmaP/+da7hHiIpRC4e8vlpK9x+s4B5KwizS09L920R8knafTeAtMBMfiBiZhwQi2QLd0JOXIVnXUuuKq8wkYraVoVaYlxiIZte1YqFzjddzkzaGg8PE=
+app: ring-road-weather
+skip_cleanup: true
