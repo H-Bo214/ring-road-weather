@@ -58,7 +58,7 @@ class App extends Component {
           }}
         />
         <Route
-          exact path="/details-page"
+           exact path="/details-page/:cityName"
           render={ () => {
             return (
               <DetailsPage 
