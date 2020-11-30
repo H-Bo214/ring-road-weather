@@ -72,7 +72,7 @@ class Form extends Component {
               onClick={ (event) => this.submitCityRequest(event) }
             >Get weather
             </button>
-              {this.state.redirectDetailPage && <Redirect to="/details-page" />}
+              {this.state.redirectDetailPage && <Redirect to={`/details-page/${this.state.city}` }/>}
           </form>
         </article>
       </section>
