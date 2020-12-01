@@ -38,6 +38,7 @@ class Form extends Component {
     } else {
       const cityName = {name: this.state.city}
       this.props.handleFetch(cityName.name)
+      this.setState({error: ''})
       this.setState({redirectDetailPage: true})
     }
   }
@@ -54,13 +55,13 @@ class Form extends Component {
               <h3 className="region-select" >
                 {this.state.region}
               </h3>:
-              <h3 className="region-select">Pick a region</h3>}
+              <h3 className="region-select">Select a region</h3>}
             <select
               name="region"
               value={this.state.region}
               onChange={this.handleChange}
             >
-              <option value={''}>Pick a region</option>
+              <option value={''}>Region</option>
               {this.generateData(regions)}
             </select>
             <select
@@ -68,10 +69,10 @@ class Form extends Component {
               value={this.state.city}
               onChange={this.handleChange}
             >
-              <option className="choices" key={1} value={''}>Pick a city</option>
+              <option className="choices" key={1} value={''}>Select a city</option>
               {this.state.region && this.locateCities(allCities)}
             </select>
-              {this.state.error && <h3 className="form-error">{this.state.error}</h3>}
+              {!this.state.city && <h3 className="form-error">{this.state.error}</h3>}
             <button 
               className="get-weather-button" 
               type="button"
