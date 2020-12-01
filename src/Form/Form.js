@@ -11,6 +11,7 @@ class Form extends Component {
       region: '',
       city: '',
       redirectDetailPage: false,
+      error: ''
     };
   };
 
@@ -32,9 +33,13 @@ class Form extends Component {
 
   submitCityRequest = (event) => {
     event.preventDefault()
-    const cityName = {name: this.state.city}
-    this.props.handleFetch(cityName.name)
-    this.setState({redirectDetailPage: true})
+    if (!this.state.city) {
+      this.setState({error: 'Please select a region and city'})
+    } else {
+      const cityName = {name: this.state.city}
+      this.props.handleFetch(cityName.name)
+      this.setState({redirectDetailPage: true})
+    }
   }
 
   render() {
@@ -66,10 +71,11 @@ class Form extends Component {
               <option className="choices" key={1} value={''}>Pick a city</option>
               {this.state.region && this.locateCities(allCities)}
             </select>
+              {this.state.error && <h2>{this.state.error}</h2>}
             <button 
               className="get-weather-button" 
               type="button"
-              onClick={ (event) => this.submitCityRequest(event) }
+              onClick={(event) => this.submitCityRequest(event)}
             >Get weather
             </button>
               {this.state.redirectDetailPage && <Redirect to={`/details-page/${this.state.city}` }/>}
