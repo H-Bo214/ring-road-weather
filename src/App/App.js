@@ -8,7 +8,6 @@ import FavoritesPage from '../FavoritesPage/FavoritesPage'
 import Form from '../Form/Form'
 import '../App/App.css';
 
-
 class App extends Component {
   constructor() {
     super()
