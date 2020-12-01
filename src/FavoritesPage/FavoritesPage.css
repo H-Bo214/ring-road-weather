@@ -1,0 +1,11 @@
+.no-favorites {
+  text-align: center; 
+  color: antiquewhite;
+  text-align: center;
+  width: 100vw;
+}
+
+.favorite-cities {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
