@@ -7,7 +7,7 @@ import DetailsPage from '../DetailsPage/DetailsPage'
 import FavoritesPage from '../FavoritesPage/FavoritesPage'
 import Form from '../Form/Form'
 import '../App/App.css';
-
+import { DateTime } from 'luxon';
 
 class App extends Component {
   constructor() {
@@ -36,6 +36,7 @@ class App extends Component {
    try {
     const data = await this.fetchWeather(cityName)
     if (data) {
+      console.log('data', data)
       const filteredData = this.cleanData(data)
       this.setState({currentWeather: filteredData })
     }
