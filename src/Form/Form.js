@@ -71,7 +71,7 @@ class Form extends Component {
               <option className="choices" key={1} value={''}>Pick a city</option>
               {this.state.region && this.locateCities(allCities)}
             </select>
-              {this.state.error && <h2>{this.state.error}</h2>}
+              {this.state.error && <h3 className="form-error">{this.state.error}</h3>}
             <button 
               className="get-weather-button" 
               type="button"
