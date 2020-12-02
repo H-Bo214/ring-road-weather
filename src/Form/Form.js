@@ -38,16 +38,15 @@ class Form extends Component {
     } else {
       const cityName = {name: this.state.city}
       this.props.handleFetch(cityName.name)
-      this.setState({error: ''})
-      this.setState({redirectDetailPage: true})
+      this.setState({redirectDetailPage: true, error: ''})
     }
   }
-
 
   render() {
     let borderStyle = {
       border: '4px solid #ffcc00'
     }
+
     let borderStyle2 = {
       border: '4px solid #ffcc00'
     }
@@ -67,7 +66,7 @@ class Form extends Component {
     return(
       <section>
         <div className="guide-to">
-          <h2 className="subtitle">Your guide to weather along Iceland's ring road</h2>
+          <h2 className="subtitle">Your guide to weather along Iceland's Ring Road</h2>
         </div>
         <article className="form-parent">
           <form className="selection-form">
