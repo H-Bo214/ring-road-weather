@@ -88,5 +88,9 @@ dd {
   .description {
     display: inline;
   }
-  
+
+  .city-header {
+    font-size: 1.6em;
+  }
+
 }

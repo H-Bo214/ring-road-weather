@@ -49,7 +49,7 @@ header h1 {
 
 }
 
-@media only screen and (max-width: 320px) {
+@media only screen and (max-width: 414px) {
   header h1 {
     font-size: 14px;
   }
@@ -63,5 +63,5 @@ header h1 {
   .route1-img {
     height: 33px;
   }
-  
+
 }

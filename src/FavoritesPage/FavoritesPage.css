@@ -9,3 +9,20 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
+
+@media only screen and (min-width: 414px) {
+  .favorite-cities {
+    display: flex;
+    flex-direction: column;
+  }
+
+}
+
+@media only screen and (max-width: 1024px) {
+  .favorite-cities {
+    display: flex;
+    flex-direction: column;
+    height: 0;
+  }
+
+}
