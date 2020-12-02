@@ -9,7 +9,7 @@ class Form extends Component {
     super();
     this.state = {
       region: '',
-      city: '',
+      city: '', 
       redirectDetailPage: false,
       error: ''
     };

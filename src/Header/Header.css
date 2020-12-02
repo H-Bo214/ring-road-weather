@@ -31,3 +31,37 @@ header h1 {
 .header-fav-btn:hover {
   transform: scale(1.1);
 }
+
+@media only screen and (max-width: 700px) {
+  header h1 {
+    font-size: 16px;
+  }
+
+  .route1-img {
+    width: 57px;
+    margin-right: 4px;
+  }
+
+  .header-fav-btn {
+    width: 6em;
+    font-weight: 700;
+  }
+
+}
+
+@media only screen and (max-width: 320px) {
+  header h1 {
+    font-size: 14px;
+  }
+
+  .header-fav-btn {
+    width: 6em;
+    font-weight: 700;
+    font-size: 14px;
+  } 
+
+  .route1-img {
+    height: 33px;
+  }
+  
+}
