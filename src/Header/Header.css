@@ -13,6 +13,7 @@ header {
 header h1 {
   margin: 0;
 }
+
 .route1-img {
   width: 100px;
 }
@@ -32,6 +33,9 @@ header h1 {
   transform: scale(1.1);
 }
 
+/* h1 {
+  
+} */
 @media only screen and (max-width: 700px) {
   header h1 {
     font-size: 16px;
@@ -51,7 +55,7 @@ header h1 {
 
 @media only screen and (max-width: 414px) {
   header h1 {
-    font-size: 14px;
+    font-size: 15px;
   }
 
   .header-fav-btn {
