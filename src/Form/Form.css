@@ -17,7 +17,7 @@
   background:#2C6472;
   padding-top: 3em;
   border-radius: 8px;
-  height: 25em;
+  height: 27em;
   opacity: .88;
 }
 
@@ -26,11 +26,12 @@
   padding-bottom: 7px;
   font-size: 27px;
 }
+
 select {
   font-size: 16px;
-  margin-bottom: 2em;
+  margin-bottom: 1em;
   width: 60%;
-  padding: .5em;
+  padding: .4em;
 }
 
 form button {
@@ -41,7 +42,6 @@ form button {
   width: 130px;
   height: 50px;
   font-size: 16px;
-  
 }
 
 .guide-to {
@@ -64,6 +64,19 @@ form button {
 }
 
 .form-error {
-  color: #FF0000;
+  color: #fff;
+}
 
+label {
+  color: #fff;
+  margin-bottom: .5em;
+  font-size: 19px;
+}
+
+.region-label {
+  margin-right: 5.3em;
+}
+
+.city-label {
+  margin-right: 6.5em;
 }

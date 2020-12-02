@@ -9,7 +9,7 @@ class Form extends Component {
     super();
     this.state = {
       region: '',
-      city: '',
+      city: '', 
       redirectDetailPage: false,
       error: ''
     };
@@ -34,20 +34,39 @@ class Form extends Component {
   submitCityRequest = (event) => {
     event.preventDefault()
     if (!this.state.city) {
-      this.setState({error: 'Please select a region and city'})
+      this.setState({error: '⚠️  Please select a region and city'})
     } else {
       const cityName = {name: this.state.city}
       this.props.handleFetch(cityName.name)
-      this.setState({error: ''})
-      this.setState({redirectDetailPage: true})
+      this.setState({redirectDetailPage: true, error: ''})
     }
   }
 
   render() {
+    let borderStyle = {
+      border: '4px solid #ffcc00'
+    }
+
+    let borderStyle2 = {
+      border: '4px solid #ffcc00'
+    }
+
+    if(this.state.region) {
+      borderStyle = {
+        border: '4px solid #fff'
+      }
+    } 
+    
+    if(this.state.city) {
+        borderStyle2 = {
+          border: '4px solid #fff'
+      }
+    } 
+    
     return(
       <section>
         <div className="guide-to">
-          <h2 className="subtitle">Your guide to weather along Iceland's ring road</h2>
+          <h2 className="subtitle">Your guide to weather along Iceland's Ring Road</h2>
         </div>
         <article className="form-parent">
           <form className="selection-form">
@@ -56,15 +75,21 @@ class Form extends Component {
                 {this.state.region}
               </h3>:
               <h3 className="region-select">Select a region</h3>}
+            <label className="region-label" htmlFor="region">Region:</label>
             <select
+              id="region"
               name="region"
+              style={borderStyle}
               value={this.state.region}
               onChange={this.handleChange}
             >
-              <option value={''}>Region</option>
+              <option value={''}>Select a region</option>
               {this.generateData(regions)}
             </select>
+            <label className="city-label" htmlFor="city">City:</label>
             <select
+              id="city"
+              style={borderStyle2}
               name="city"
               value={this.state.city}
               onChange={this.handleChange}
@@ -72,7 +97,7 @@ class Form extends Component {
               <option className="choices" key={1} value={''}>Select a city</option>
               {this.state.region && this.locateCities(allCities)}
             </select>
-              {!this.state.city && <h3 className="form-error">{this.state.error}</h3>}
+              {!this.state.city && <h4 className="form-error">{this.state.error}</h4>}
             <button 
               className="get-weather-button" 
               type="button"

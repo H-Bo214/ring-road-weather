@@ -20,11 +20,15 @@ class FavoritesPage extends Component {
         const data = await fetchWeather(cityName)
         if (data) {
           const filteredData = cleanData(data)
-          this.setState({favCitiesData: [...this.state.favCitiesData, filteredData]})
+          this.setState({
+            favCitiesData: [...this.state.favCitiesData, filteredData]
+          })
         }
-       } catch (error) {
-         this.setState({error: 'An error occurred fetching favorites.'})
-       }
+      } catch (error) {
+        this.setState({
+          error: 'An error occurred fetching favorites.'
+        })
+      }
     }
   }
 

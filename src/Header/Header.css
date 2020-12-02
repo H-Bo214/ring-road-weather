@@ -13,7 +13,8 @@ header {
 header h1 {
   margin: 0;
 }
-.route1-img {
+
+.icelandic-flag {
   width: 100px;
 }
 
@@ -30,4 +31,38 @@ header h1 {
 
 .header-fav-btn:hover {
   transform: scale(1.1);
+}
+
+@media only screen and (max-width: 700px) {
+  header h1 {
+    font-size: 16px;
+  }
+
+  .icelandic-flag {
+    width: 57px;
+    margin-right: 4px;
+  }
+
+  .header-fav-btn {
+    width: 6em;
+    font-weight: 700;
+  }
+
+}
+
+@media only screen and (max-width: 414px) {
+  header h1 {
+    font-size: 15px;
+  }
+
+  .header-fav-btn {
+    width: 6em;
+    font-weight: 700;
+    font-size: 14px;
+  } 
+
+  .icelandic-flag {
+    height: 33px;
+  }
+
 }

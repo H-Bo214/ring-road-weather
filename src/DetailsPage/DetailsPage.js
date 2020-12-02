@@ -33,7 +33,10 @@ function DetailsPage({ currentWeather, favCities, addToFavorites, isFavorite, re
       <section className="current-weather-parent">
         <div className="current-weather">
           <div className="city-header-parent">
-            <h3 className="city-header">{`Today's weather in ${cityName}`}</h3>
+            <div>
+              <p className="weather-msg">Today's weather in</p>
+              <h1 className="city-header">{`${cityName}`}</h1>
+            </div>
             <button 
               className="star"
               type="button"
