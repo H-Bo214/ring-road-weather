@@ -3,6 +3,7 @@ import { cleanData } from '../cleanData'
 import { fetchWeather } from '../apiCalls'
 import DetailsPage from '../DetailsPage/DetailsPage'
 import PropTypes from 'prop-types'
+import '../FavoritesPage/FavoritesPage.css';
 
 class FavoritesPage extends Component {
   constructor() {
@@ -28,7 +29,10 @@ class FavoritesPage extends Component {
   }
 
   displayFavorites() {
-   return this.state.favCitiesData.map(city => {
+   if (this.state.favCitiesData.length < 1) {
+     return <h1 className='no-favorites'>You don't have any favorites yet!</h1>
+   } else {
+     return this.state.favCitiesData.map(city => {
       return(
         <DetailsPage 
         key={city.id}
@@ -40,11 +44,12 @@ class FavoritesPage extends Component {
         />
       )
     })
+   }
   }
 
   render() {
     return (
-      <div>
+      <div className="favorite-cities">
         {this.displayFavorites()}
       </div>
     )
