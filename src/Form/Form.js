@@ -76,16 +76,20 @@ class Form extends Component {
                 {this.state.region}
               </h3>:
               <h3 className="region-select">Select a region</h3>}
+            <label className="region-label" htmlFor="region">Region:</label>
             <select
-              style={borderStyle}
+              id="region"
               name="region"
+              style={borderStyle}
               value={this.state.region}
               onChange={this.handleChange}
             >
-              <option value={''}>Region</option>
+              <option value={''}>Select a region</option>
               {this.generateData(regions)}
             </select>
+            <label className="city-label" htmlFor="city">City:</label>
             <select
+              id="city"
               style={borderStyle2}
               name="city"
               value={this.state.city}
