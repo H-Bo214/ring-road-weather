@@ -13,7 +13,9 @@ function Header() {
           alt="road sign for Iceland's Route 1"
         />
       </Link>
-      <h1>Ring Road Weather</h1>
+      <Link style={{textDecoration: 'none', color: '#fff'}} to="/">
+        <h1>Ring Road Weather</h1>
+      </Link>
       <Link to="/favorites">
         <button className="header-fav-btn" type="button">Favorites</button>
       </Link>
