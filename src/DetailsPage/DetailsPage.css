@@ -71,3 +71,13 @@ dd {
 .description p {
   line-height: 2;
 }
+
+.weather-msg {
+
+}
+
+.city-header {
+  font-size: 2em;
+  line-height: 0;
+  margin-top: 1.2rem;
+}
