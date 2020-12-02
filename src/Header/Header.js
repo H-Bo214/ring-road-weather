@@ -1,16 +1,16 @@
 import React from 'react';
 import '../Header/Header.css';
-import route1 from '../assets/route1.png'
 import { Link } from 'react-router-dom'
+import icelandFlag from '../assets/iceland-flag.svg'
 
 function Header() {
   return(
     <header>
       <Link to="/">
         <img 
-          className="route1-img"
-          src={route1} 
-          alt="road sign for Iceland's Route 1"
+          className="icelandic-flag"
+          src={icelandFlag} 
+          alt="Icelandic Flag"
         />
       </Link>
       <Link style={{textDecoration: 'none', color: '#fff'}} to="/">
